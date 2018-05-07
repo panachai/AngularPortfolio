@@ -10,10 +10,15 @@
 
 ## Fix Error node_modules appears empty, you may need to run npm install
 - cd ไปที่ตำแหน่งโฟลเดอโปรเจค รัน `npm install`
+- แก้ .map ตอนยิง http rxjs/add/operator/map `npm i --save rxjs-compat`
 
 ## Deploy and Manage
 - Project Console: https://console.firebase.google.com/u/0/project/portfolioangular/overview
 - Hosting URL: https://portfolioangular.firebaseapp.com
+
+# JSON
+- DummyJSON : https://jsonplaceholder.typicode.com/
+- Generate Typescript From JSON : http://json2ts.com/
 
 # 
 
