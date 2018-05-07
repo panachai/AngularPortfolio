@@ -16,7 +16,8 @@
 
 <h2>Edit Profile</h2>
 <button (click)="toggleEdit()">Edit</button>
-<br><br>
+<br>
+<br>
 <div *ngIf="isEditable == true">
   <form>
     <div>
@@ -26,12 +27,23 @@
       <input type="text" [(ngModel)]="name" name="name">
     </div>
 
+    <br>
+
     <div>
       <label for="age">
         <b>Age: </b>
       </label>
-      <input type="text" [(ngModel)]="age" name="age">
+
+      <input type="text" #age="ngModel" required maxlength="3" ngModel id="age" name="age">
+      <!-- Valid PASS -->
+      <div class="alert alert-danger" *ngIf="age.touched && !age.valid">
+        <div *ngIf="age.errors.required">Age required</div>
+        <div *ngIf="age.errors.maxlength">Age to much digit</div>
+      </div>
+      
     </div>
+
+    <br>
 
     <div>
       <label for="email">
