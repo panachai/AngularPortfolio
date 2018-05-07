@@ -5,7 +5,7 @@
 - Generate Component `ng g component --spec=false components/__`
 - การ Deploy Project
     `ng build` หรือ `ng build --p` เพื่ออัพเดท โปรเจคใน /dist
-    *ถ้ามีปัญหาลบ folder dist ออกหลัง build แล้วทำการ build ใหม่อีกครั้ง
+    *ถ้ามีปัญหาลบ folder dist ออกก่อน build แล้วทำการ build
     `firebase deploy` เพื่ออัพงานขึ้น firebase
 
 ## Fix Error node_modules appears empty, you may need to run npm install
@@ -16,9 +16,16 @@
 - Project Console: https://console.firebase.google.com/u/0/project/portfolioangular/overview
 - Hosting URL: https://portfolioangular.firebaseapp.com
 
-# JSON
+## JSON
 - DummyJSON : https://jsonplaceholder.typicode.com/
 - Generate Typescript From JSON : http://json2ts.com/
+
+# Tool
+##Nodejs (API)
+- `npm install express --save`      ไว้ใช้กับ NodeJS ในการรับ Call API
+- `npm install body-parser --save`  ไว้ parse JSON
+- `npm install mongodb --save`      ไว้ต่อกับ mongodb
+- `npm i joi --save`                ไว้ Validate ต่างๆ
 
 # 
 
