@@ -1,17 +1,21 @@
 #by Createtor
 
+##DEV
+- Generate Service `ng g service --spec=false services/__`
+- Generate Component `ng g component --spec=false components/__`
+- การ Deploy Project
+    `ng build` หรือ `ng build --p` เพื่ออัพเดท โปรเจคใน /dist
+    *ถ้ามีปัญหาลบ folder dist ออกหลัง build แล้วทำการ build ใหม่อีกครั้ง
+    `firebase deploy` เพื่ออัพงานขึ้น firebase
+
 ##Fix Error node_modules appears empty, you may need to run npm install
 - cd ไปที่ตำแหน่งโฟลเดอโปรเจค รัน `npm install`
-
-##การ Deploy Project
-- `ng build` หรือ `ng build --p` เพื่ออัพเดท โปรเจคใน /dist
-*ถ้ามีปัญหาลบ folder dist ออกหลัง build แล้วทำการ build ใหม่อีกครั้ง
-
-- `firebase deploy` เพื่ออัพงานขึ้น firebase
 
 ##Deploy and Manage
 - Project Console: https://console.firebase.google.com/u/0/project/portfolioangular/overview
 - Hosting URL: https://portfolioangular.firebaseapp.com
+
+==============================================
 
 ==============================================
 
