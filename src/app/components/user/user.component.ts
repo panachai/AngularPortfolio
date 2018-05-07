@@ -27,6 +27,8 @@ export class UserComponent implements OnInit {
   // array
   private skills: string[];
 
+  private isEditable:boolean = true;
+
   constructor(private todoService: TodoService) {
 
   }
@@ -66,7 +68,9 @@ export class UserComponent implements OnInit {
     });
     return false;
   }
-
+  toggleEdit(){
+    this.isEditable =! this.isEditable;
+  }
 }
 
 interface Todo {

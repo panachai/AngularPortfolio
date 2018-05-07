@@ -1,4 +1,4 @@
-ตัวอย่าง
+<h2>ตัวอย่าง</h2>
 <ul>
   <li>
     <b>Name: </b>{{name}}
@@ -14,38 +14,41 @@
   </li>
 </ul>
 
-้
 <h2>Edit Profile</h2>
-<form>
-  <div>
-    <label for="name">
-      <b>Name: </b>
-    </label>
-    <input type="text" [(ngModel)]="name" name="name">
-  </div>
+<button (click)="toggleEdit()">Edit</button>
+<br><br>
+<div *ngIf="isEditable == true">
+  <form>
+    <div>
+      <label for="name">
+        <b>Name: </b>
+      </label>
+      <input type="text" [(ngModel)]="name" name="name">
+    </div>
 
-  <div>
-    <label for="age">
-      <b>Age: </b>
-    </label>
-    <input type="text" [(ngModel)]="age" name="age">
-  </div>
+    <div>
+      <label for="age">
+        <b>Age: </b>
+      </label>
+      <input type="text" [(ngModel)]="age" name="age">
+    </div>
 
-  <div>
-    <label for="email">
-      <b>Email: </b>
-    </label>
-    <input type="text" [(ngModel)]="email" name="email">
-  </div>
+    <div>
+      <label for="email">
+        <b>Email: </b>
+      </label>
+      <input type="text" [(ngModel)]="email" name="email">
+    </div>
 
-  <div>
-    <label for="address.street">
-      <b>Address_street: </b>
-    </label>
-    <input type="text" [(ngModel)]="address.street" name="address.street">
-  </div>
+    <div>
+      <label for="address.street">
+        <b>Address_street: </b>
+      </label>
+      <input type="text" [(ngModel)]="address.street" name="address.street">
+    </div>
 
-</form>
+  </form>
+</div>
 
 <h2>Skills</h2>
 <form (submit)="addSkill(skill.value)">
