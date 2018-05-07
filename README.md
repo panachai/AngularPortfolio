@@ -8,8 +8,8 @@
 - `firebase` deploy เพื่ออัพงานขึ้น firebase
 
 ##Deploy and Manage
-- Project Console: https://console.firebase.google.com/project/easycal-ed5f6/overview
-- Hosting URL: https://easycal-ed5f6.firebaseapp.com
+- Project Console: https://console.firebase.google.com/u/0/project/portfolioangular
+- Hosting URL: https://portfolioangular.firebaseapp.com
 
 ==============================================
 
