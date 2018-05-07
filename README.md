@@ -5,10 +5,12 @@
 
 ##การ Deploy Project
 - `ng build` หรือ `ng build --p` เพื่ออัพเดท โปรเจคใน /dist
-- `firebase` deploy เพื่ออัพงานขึ้น firebase
+*ถ้ามีปัญหาลบ folder dist ออกหลัง build แล้วทำการ build ใหม่อีกครั้ง
+
+- `firebase deploy` เพื่ออัพงานขึ้น firebase
 
 ##Deploy and Manage
-- Project Console: https://console.firebase.google.com/u/0/project/portfolioangular
+- Project Console: https://console.firebase.google.com/u/0/project/portfolioangular/overview
 - Hosting URL: https://portfolioangular.firebaseapp.com
 
 ==============================================
