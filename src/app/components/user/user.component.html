@@ -60,3 +60,11 @@
     <button (click)="removeSkill(skill)"> X </button>
   </li>
 </ul>
+
+<h2>Todo List</h2>
+<ul>
+  <!-- <li data-ng-repeat="todo in todoList"><b> : </b>{{todo.title}}</li> -->
+  <li style="list-style-type: none" *ngFor="let todo of todoList;">
+    {{todo.userId}}. {{todo.id}} {{todo.title}} {{todo.completed}}
+  </li>
+</ul>

@@ -6,6 +6,7 @@ import { UserComponent } from './components/user/user.component';
 import { AboutusComponent } from './components/aboutus/aboutus.component';
 import { FormsModule } from '@angular/forms' // import เพื่อใช้ ngModel บน View
 import { TodoService } from './services/todo.service' // Service
+import { HttpModule } from '@angular/http'; // Module Service
 
 @NgModule({
   declarations: [ // Component
@@ -15,7 +16,8 @@ import { TodoService } from './services/todo.service' // Service
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpModule
   ], // Service
   providers: [TodoService],
   bootstrap: [AppComponent]
