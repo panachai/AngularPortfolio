@@ -7,6 +7,12 @@ import { AboutusComponent } from './components/aboutus/aboutus.component';
 import { FormsModule } from '@angular/forms' // import เพื่อใช้ ngModel บน View
 import { TodoService } from './services/todo.service' // Service
 import { HttpModule } from '@angular/http'; // Module Service
+import { RouterModule, Routes } from '@angular/router'; //router
+
+const appRoutes: Routes = [
+  { path: "", component: UserComponent },
+  { path: "about", component: AboutusComponent }
+]
 
 @NgModule({
   declarations: [ // Component
@@ -17,7 +23,8 @@ import { HttpModule } from '@angular/http'; // Module Service
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(appRoutes) //routes
   ], // Service
   providers: [TodoService],
   bootstrap: [AppComponent]
