@@ -1,3 +1,18 @@
+#by Createtor
+
+##Fix Error node_modules appears empty, you may need to run npm install
+- cd ไปที่ตำแหน่งโฟลเดอโปรเจค รัน `npm install`
+
+##การ Deploy Project
+- `ng build` หรือ `ng build --p` เพื่ออัพเดท โปรเจคใน /dist
+- `firebase` deploy เพื่ออัพงานขึ้น firebase
+
+##Deploy and Manage
+- Project Console: https://console.firebase.google.com/project/easycal-ed5f6/overview
+- Hosting URL: https://easycal-ed5f6.firebaseapp.com
+
+==============================================
+
 # AngularPortfolio
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.0.
