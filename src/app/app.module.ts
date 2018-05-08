@@ -9,10 +9,12 @@ import { TodoService } from './services/todo.service' // Service
 import { HttpModule } from '@angular/http'; // Module Service
 import { RouterModule, Routes } from '@angular/router'; //router
 import { NavbarComponent } from './shared/navbar/navbar.component';
+import { NotfoundComponent } from './shared/notfound/notfound.component';
 
 const appRoutes: Routes = [
   { path: "", component: UserComponent },
-  { path: "about", component: AboutusComponent }
+  { path: "about", component: AboutusComponent },
+  { path: '**', component: NotfoundComponent }
 ]
 
 @NgModule({
@@ -20,7 +22,8 @@ const appRoutes: Routes = [
     AppComponent,
     UserComponent,
     NavbarComponent,
-    AboutusComponent
+    AboutusComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,
