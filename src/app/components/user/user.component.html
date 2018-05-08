@@ -15,7 +15,11 @@
 </ul>
 
 <h2>Edit Profile</h2>
-<button (click)="toggleEdit()">Edit</button>
+<!-- <button (click)="toggleEdit()">Edit</button> -->
+<button (click)="toggleEdit()" type="button" class="btn btn-primary" tooltip="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+  Edit
+</button>
+
 <br>
 <br>
 <div *ngIf="isEditable == true">
@@ -40,7 +44,7 @@
         <div *ngIf="age.errors.required">Age required</div>
         <div *ngIf="age.errors.maxlength">Age to much digit</div>
       </div>
-      
+
     </div>
 
     <br>
