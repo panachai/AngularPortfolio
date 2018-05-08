@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms' // import เพื่อใช้ 
 import { TodoService } from './services/todo.service' // Service
 import { HttpModule } from '@angular/http'; // Module Service
 import { RouterModule, Routes } from '@angular/router'; //router
+import { NavbarComponent } from './shared/navbar/navbar.component';
 
 const appRoutes: Routes = [
   { path: "", component: UserComponent },
@@ -18,6 +19,7 @@ const appRoutes: Routes = [
   declarations: [ // Component
     AppComponent,
     UserComponent,
+    NavbarComponent,
     AboutusComponent
   ],
   imports: [
