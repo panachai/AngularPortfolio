@@ -11,6 +11,13 @@ import { RouterModule, Routes } from '@angular/router'; //router
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { NotfoundComponent } from './shared/notfound/notfound.component';
 
+// ngx-Boostrap //ย้ายไป app-bootstrap
+// import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+// import { TooltipModule } from 'ngx-bootstrap/tooltip';
+// import { ModalModule } from 'ngx-bootstrap/modal';
+
+import { AppBootstrapModule } from './app-bootstrap/app-bootstrap.module'; //pack ไฟล์ Boostrap แล้วดึงมา
+
 const appRoutes: Routes = [
   { path: "", component: UserComponent },
   { path: "about", component: AboutusComponent },
@@ -26,12 +33,12 @@ const appRoutes: Routes = [
     NotfoundComponent
   ],
   imports: [
-    BrowserModule,
+    [BrowserModule, AppBootstrapModule],
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(appRoutes) //routes
-  ], // Service
-  providers: [TodoService],
+    RouterModule.forRoot(appRoutes), //routes 
+  ],
+  providers: [TodoService],// Service
   bootstrap: [AppComponent]
 })
 export class AppModule { }

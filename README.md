@@ -22,13 +22,14 @@
 
 # Tool
 ##Nodejs (API)
-- `npm install express --save`          ไว้ใช้กับ NodeJS ในการรับ Call API
-- `npm install -g nodemon --save`       ไว้ Refresh Nodejs เวลา Save
-- `npm install body-parser --save`      ไว้ parse JSON
-- `npm install mongodb --save`          ไว้ต่อกับ mongodb
-- `npm i joi --save`                    ไว้ Validate ต่างๆ
-- `npm install bootstrap --save`        Boostrap 3
-- `npm install bootstrap@next --save`   Boostrap 4 Beta
+- `npm install express --save`                  ไว้ใช้กับ NodeJS ในการรับ Call API
+- `npm install -g nodemon --save`               ไว้ Refresh Nodejs เวลา Save
+- `npm install body-parser --save`              ไว้ parse JSON
+- `npm install mongodb --save`                  ไว้ต่อกับ mongodb
+- `npm i joi --save`                            ไว้ Validate ต่างๆ
+- `npm install bootstrap --save`                Boostrap 3      *ต้องเพิ่มใน style.css
+- `npm install bootstrap@next --save`           Boostrap 4 Beta *ต้องเพิ่มใน style.css
+- `npm install bootstrap ngx-bootstrap --save`  rf: https://loiane.com/2017/08/how-to-add-bootstrap-to-an-angular-cli-project/
 
 # 
 
