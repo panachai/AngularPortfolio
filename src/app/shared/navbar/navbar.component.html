@@ -29,7 +29,7 @@
       <li>
         <a class="nav-link" routerLink="">User</a>
       </li>
-      <li routerLinkAcive="active" >
+      <li routerLinkAcive="active">
         <a class="nav-link" [routerLink]="['about']">Aboutus</a>
       </li>
 
@@ -58,11 +58,16 @@
 <ul class="nav nav-pills">
   <li class="nav-item">
     <!-- <a class="nav-link" routerLinkActive="active" href="#">Active</a> -->
-    <a class="nav-link" routerLinkActive="active" [routerLink]="['about']">Aboutus</a>
+    <a class="nav-link" routerLinkActive="active" [routerLink]="['s']">home</a>
   </li>
+
   <li class="nav-item">
     <!-- <a class="nav-link" routerLinkActive="active" href="#">Active</a> -->
-    <a class="nav-link" routerLinkActive="active" [routerLink]="['']">home</a>
+    <a class="nav-link" routerLinkActive="active" [routerLink]="['about']">Aboutus</a>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link" routerLinkActive="active" [routerLink]="['register']">Register</a>
   </li>
 
   <li class="nav-item dropdown">
