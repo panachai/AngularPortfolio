@@ -4,19 +4,21 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { UserComponent } from './components/user/user.component';
 import { AboutusComponent } from './components/aboutus/aboutus.component';
-import { FormsModule } from '@angular/forms' // import เพื่อใช้ ngModel บน View
-import { TodoService } from './services/todo.service' // Service
-import { HttpModule } from '@angular/http'; // Module Service
-import { RouterModule, Routes } from '@angular/router'; //router
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { NotfoundComponent } from './shared/notfound/notfound.component';
 
-// ngx-Boostrap //ย้ายไป app-bootstrap
-// import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
-// import { TooltipModule } from 'ngx-bootstrap/tooltip';
-// import { ModalModule } from 'ngx-bootstrap/modal';
+// import เพื่อใช้ ngModel บน View
+import { FormsModule } from '@angular/forms'
 
-import { AppBootstrapModule } from './app-bootstrap/app-bootstrap.module'; //pack ไฟล์ Boostrap แล้วดึงมา
+// Module Service
+import { TodoService } from './services/todo.service'
+import { HttpModule } from '@angular/http';
+
+//router
+import { RouterModule, Routes } from '@angular/router';
+
+//pack ไฟล์ Boostrap แล้วดึงมา
+import { AppBootstrapModule } from './app-bootstrap/app-bootstrap.module';
 
 const appRoutes: Routes = [
   { path: "", component: UserComponent },
@@ -25,7 +27,7 @@ const appRoutes: Routes = [
 ]
 
 @NgModule({
-  declarations: [ // Component
+  declarations: [
     AppComponent,
     UserComponent,
     NavbarComponent,
@@ -36,9 +38,9 @@ const appRoutes: Routes = [
     [BrowserModule, AppBootstrapModule],
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(appRoutes), //routes 
+    RouterModule.forRoot(appRoutes),
   ],
-  providers: [TodoService],// Service
+  providers: [TodoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
