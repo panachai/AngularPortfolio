@@ -18,12 +18,13 @@ import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 
 //pack ไฟล์ Boostrap แล้วดึงมา
-import { AppBootstrapModule} from './app-bootstrap/app-bootstrap.module';
-import { RegisterComponent } from './components/register/register.component' ;
+import { AppBootstrapModule } from './app-bootstrap/app-bootstrap.module';
+import { RegisterComponent } from './components/register/register.component';
 
 const appRoutes: Routes = [
   { path: "", component: UserComponent },
   { path: "about", component: AboutusComponent },
+  { path: "register", component: RegisterComponent },
   { path: '**', component: NotfoundComponent }
 ]
 
