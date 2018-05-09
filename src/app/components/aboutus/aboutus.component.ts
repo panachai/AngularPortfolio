@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TodoService } from '../../services/todo.service';
 
 @Component({
   selector: 'app-aboutus',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutusComponent implements OnInit {
 
-  constructor() { }
+  private products: Product[];
+
+  constructor(private todoService: TodoService) { }
 
   ngOnInit() {
+    this.todoService.getTestCallApi().subscribe((response) => {
+      this.products = response;
+    });
   }
 
+}
+
+interface Product {
+  id: number;
+  name: string;
 }

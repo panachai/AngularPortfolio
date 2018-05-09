@@ -16,4 +16,10 @@ export class TodoService {
       .map(res => res.json());
   }
 
+  getTestCallApi(){
+    return this.http
+    .get("http://localhost:3000/api/product")
+    .map(res => res.json());
+  }
+
 }
