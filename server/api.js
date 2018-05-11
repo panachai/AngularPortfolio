@@ -1,8 +1,9 @@
 const Joi = require('joi');
 const express = require('express');
-const app = express();
+const router = express.Router();
+// const app = express();
 
-app.use(express.json());
+router.use(express.json());
 
 //mock data
 const products = [
@@ -14,24 +15,24 @@ const products = [
     { id: 6, name: 'smartwatch' },
 ];
 
-app.get('/', (req, res) => {
+router.get('/', (req, res) => {
     res.send('Hello World to Learning Node.js');
 });
 
 //Get ALL
-app.get('/api/product', (req, res) => {
+router.get('/api/product', (req, res) => {
     res.send(products);
 });
 
 //Get by ID
-app.get('/api/product/:id', (req, res) => {
+router.get('/api/product/:id', (req, res) => {
     const product = products.find(c => c.id === parseInt(req.params.id));
     if (!product) return res.status(404).send('The product with the given ID was not found.');
     res.send(product);
 });
 
 //Post Add
-app.post('/api/product', (req, res) => {
+router.post('/api/product', (req, res) => {
     // If invalid, return 400 - Bad request
     const { error } = validateProduct(req.body); // result.error
     if (error) return res.status(400).send(error.details[0].message);
@@ -45,7 +46,7 @@ app.post('/api/product', (req, res) => {
 });
 
 //Put Update
-app.put('/api/product/:id', (req, res) => {
+router.put('/api/product/:id', (req, res) => {
     // If not existing , return 404
     const product = products.find(c => c.id === parseInt(req.params.id));
     if (!product) return res.status(404).send('The product with the given ID was not found.')
@@ -61,7 +62,7 @@ app.put('/api/product/:id', (req, res) => {
     res.send(product);
 });
 
-app.delete('/api/product/:id', (req, res) => {
+router.delete('/api/product/:id', (req, res) => {
     // If not existing , return 404
     const product = products.find(c => c.id === parseInt(req.params.id));
     if (!product) return res.status(404).send('The product with the given ID was not found.');
@@ -81,4 +82,4 @@ function validateProduct(product) {
 }
 
 const port = process.env.PORT || 3000;
-app.listen(port, () => console.log(`Listenning on port ${port}...`));
+router.listen(port, () => console.log(`Listenning on port ${port}...`));
