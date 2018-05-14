@@ -19,12 +19,15 @@ import { RouterModule, Routes } from '@angular/router';
 
 //pack ไฟล์ Boostrap แล้วดึงมา
 import { AppBootstrapModule } from './app-bootstrap/app-bootstrap.module';
+
 import { RegisterComponent } from './components/register/register.component';
+import { AboutmeComponent } from './components/aboutme/aboutme.component';
 
 const appRoutes: Routes = [
-  { path: "", component: UserComponent },
+  { path: "", component: AboutmeComponent },
   { path: "about", component: AboutusComponent },
   { path: "register", component: RegisterComponent },
+  { path: "user", component: UserComponent },
   { path: '**', component: NotfoundComponent }
 ]
 
@@ -34,6 +37,7 @@ const appRoutes: Routes = [
     UserComponent,
     NavbarComponent,
     RegisterComponent,
+    AboutmeComponent,
     AboutusComponent,
     NotfoundComponent
   ],
