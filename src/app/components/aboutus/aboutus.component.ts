@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TodoService } from '../../services/todo.service';
+import { AppComponent } from '../../app.component';
 
 @Component({
   selector: 'app-aboutus',
@@ -10,7 +11,10 @@ export class AboutusComponent implements OnInit {
 
   private products: Product[];
 
-  constructor(private todoService: TodoService) { }
+  // constructor() { }
+  constructor(private todoService: TodoService, private appcomponent: AppComponent) {
+    this.appcomponent.setTitle('Aboutus Resume');
+  }
 
   ngOnInit() {
     this.todoService.getTestCallApi().subscribe((response) => {

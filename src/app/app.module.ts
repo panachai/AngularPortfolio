@@ -22,6 +22,7 @@ import { AppBootstrapModule } from './app-bootstrap/app-bootstrap.module';
 
 import { RegisterComponent } from './components/register/register.component';
 import { AboutmeComponent } from './components/aboutme/aboutme.component';
+import { IndexComponent } from './components/index/index.component';
 
 const appRoutes: Routes = [
   { path: "", component: AboutmeComponent },
@@ -38,6 +39,7 @@ const appRoutes: Routes = [
     NavbarComponent,
     RegisterComponent,
     AboutmeComponent,
+    IndexComponent,
     AboutusComponent,
     NotfoundComponent
   ],
