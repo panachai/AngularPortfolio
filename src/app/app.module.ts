@@ -26,7 +26,8 @@ import { IndexComponent } from './components/index/index.component';
 
 const appRoutes: Routes = [
   { path: "", component: AboutmeComponent },
-  { path: "about", component: AboutusComponent },
+  { path: "aboutme", component: AboutmeComponent },
+  { path: "aboutus", component: AboutusComponent },
   { path: "register", component: RegisterComponent },
   { path: "user", component: UserComponent },
   { path: '**', component: NotfoundComponent }
