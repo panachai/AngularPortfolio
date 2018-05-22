@@ -1,18 +1,66 @@
 const express = require('express');
 const router = express.Router();
-const mongoClient = express('mogodb').mongoClient;
-
+const mongoClient = require('mongodb').MongoClient;
+const mongo_string = "mongodb://localhost:27017";
 
 router.get('/show', function (req, res) {
-    res.end("Hi, show api");
+    // res.end("Hi, show api");
+
+    mongoClient.connect(mongo_string, function (req, database) {
+        //set db
+        const testmongodb = database.db('testmongodb')
+
+        testmongodb.collection('products')
+            .find()
+            .toArray()
+            .then(products => {
+                const output = { result: "ok", message: products }
+                res.json(output);
+            })
+
+    });
 })
 
 router.post('/add', function (req, res) {
-    res.end("Hi, add api: " + req.body.name);
+    // res.end("Hi, add api: " + req.body.name);
+    mongoClient.connect(mongo_string, function (err, database) {
+
+        //set db
+        const testmongodb = database.db('testmongodb')
+
+        const data = {
+            name: req.body.name
+        };
+        testmongodb.collection('products')
+            .insertOne(data, (err, result) => {
+                if (err) throw err;
+                const response = {
+                    resut: "ok", message: result.result.n + " Inserted"
+                };
+                res.json(response);
+            });
+
+        database.close();
+    });
 })
 
 router.delete('/delete/:name', function (req, res) {
-    res.end("Hi, delete api: " + req.params.name);
+    // res.end("Hi, delete api: " + req.params.name);
+    mongoClient.connect(mongo_string, function (err, database) {
+
+        //ถ้าเจอข้อมูลตรงกับ query จะทำการลบทิ้ง
+        const query = { name: req.params.name };
+
+        //set db
+        const testmongodb = database.db('testmongodb')
+        testmongodb.collection('products')
+            .deleteMany(query, function (err, result) {
+                const response = { result: "ok", message: result.result.n + " Deleted" };
+                res.json(response);
+            });
+
+        database.close();
+    });
 })
 
 module.exports = router;
